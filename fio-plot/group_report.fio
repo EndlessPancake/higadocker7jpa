@@ -1,0 +1,9 @@
+[random-rw]
+rw=randrw
+size=128m
+blocksize=4k
+directory=/data
+ioengine=libaio
+numjobs=8
+group_reporting
+iodepth=32

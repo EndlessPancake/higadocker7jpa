@@ -1,0 +1,28 @@
+[global]
+rw=randread
+size=256m
+directory=/tmp/fio-test
+ioengine=libaio
+iodepth=4
+invalidate=1
+direct=1
+# Set max acceptable latency to 500msec
+latency_target=500000
+# profile over a 5s window
+latency_window=5000000
+# 99.9% of IOs must be below the target
+latency_percentile=99.9
+
+## for Device Target
+# [device]
+# filename=/dev/sda
+
+[random-read]
+rw=randread
+size=128m
+directory=/tmp/fio-test
+
+[random-write]
+rw=randwrite
+size=128m
+directory=/tmp/fio-test

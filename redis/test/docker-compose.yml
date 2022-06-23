@@ -1,0 +1,9 @@
+version: '2'
+services:
+  cache:
+    image: redis:latest
+    image: redis
+    container_name: 'redis-cpz'
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes
